@@ -1,0 +1,27 @@
+Caffe installation
+
+
+
+
+1.  
+./include/caffe/util/db_lmdb.hpp:8:10: fatal error: lmdb.h: No such file or directory
+ #include "lmdb.h"
+
+apt-get install liblmdb-dev
+ 
+2.
+nvcc fatal   : Unsupported gpu architecture 'compute_20'
+
+uncomment Compute arch 20
+
+3.
+/usr/bin/ld: cannot find -lhdf5_hl
+
+cd /usr/lib/x86_64-linux-gnu
+sudo ln -s libhdf5_serial.so.8.0.2 libhdf5.so
+sudo ln -s libhdf5_serial_hl.so.8.0.2 libhdf5_hl.so
+
+4.
+opencv error
+uncomment PKG_CONFIG = 1
+
